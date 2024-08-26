@@ -5,6 +5,7 @@ import { createPinia } from 'pinia'
 import components from '@/components/UI'
 
 import App from './App.vue'
+import router from './router/router'
 
 const app = createApp(App)
 
@@ -13,5 +14,6 @@ components.forEach((component) => {
 })
 
 app.use(createPinia())
+app.use(router)
 
 app.mount('#app')
